@@ -183,7 +183,7 @@ Here we explain each part of this repo.
 
 ```bibtex
 @article{Wu2025FasterPy,
-  author = {Wu, Yue and Han, Minghao and Liang, Peng},
+  author = {Wu, Yue and Han, Minghao and Li, Ruiyin and Liang, Peng},
   title = {{FasterPy: An Execution Efficiency Optimization Framework for LLM-Generated Code}},
   journal={arXiv preprint arXiv:xxxx.xxxxx},
   year={2025}
