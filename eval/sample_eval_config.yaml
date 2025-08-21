@@ -1,0 +1,15 @@
+model_generated_outputs_path: "to_be_eval/test-qw2.5-7b-i.jsonl"
+inputs_outputs_basepath: "codenet/public_test_cases"
+reference_file_path: "py_reference.jsonl"
+output_report_file_path: "eval-results/test-qw2.5-7b-i-report.jsonl"
+language: "python"
+num_problems_to_evaluate: -1
+num_trials: 4
+ignore_first_k: 1
+max_time_per_run: 3
+temp_dir: null
+model_generated_potentially_faster_code_col: "model_generated_potentially_faster_code_col"
+slow_code_col: "slow_code_col"
+reference_code_col: "reference_code_col"
+is_prompt_based: false
+cpu_number: 1
