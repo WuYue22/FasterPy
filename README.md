@@ -1,5 +1,5 @@
 <div align="center">
-  <h1 align="center">FasterPy: An Execution Efficiency Optimization Framework for LLM-Generated Code</h1>
+  <h1 align="center">FasterPy: An LLM-based Code Execution Efficiency Optimization Framework</h1>
 </div>
 
 <div align="center">
@@ -183,8 +183,8 @@ Here we explain each part of this repo.
 
 ```bibtex
 @article{Wu2025FasterPy,
-  author = {Wu, Yue and Han, Minghao and Li, Ruiyin and Liang, Peng},
-  title = {{FasterPy: An Execution Efficiency Optimization Framework for LLM-Generated Code}},
+  author = {Wu, Yue and Han, Minghao and Li, Ruiyin and Liang, Peng and Tahir, Amjed and Li, Zengyang and Feng, Qiong and Shahin, Mojtaba},
+  title = {{FasterPy: An LLM-based Code Execution Efficiency Optimization Framework}},
   journal={arXiv preprint arXiv:xxxx.xxxxx},
   year={2025}
 }
