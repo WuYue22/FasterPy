@@ -1,0 +1,38 @@
+Reading reference file from py_reference.jsonl
+Reading model generated outputs from to_be_eval/ds-c-6.7b-i.jsonl
+Running each program 4 times, skipping the first 1 runs, and getting the input-output pairs from codenet/public_test_cases
+Read 752 rows from to_be_eval/ds-c-6.7b-i.jsonl
+Unique inputs in reference: 993
+Number of programs to evaluate: 752
+Number of trials per program: 4
+Number of trials to ignore: 1
+Maximum time per run: 3
+Input column: slow_code_col
+Reference column: reference_code_col
+Model generated column: model_generated_potentially_faster_code_col
+inputs/outputs basepath: codenet/public_test_cases
+Ran for 752 problems
+
+  0%|          | 0/752 [00:00<?, ?it/s]
+100%|██████████| 752/752 [00:00<00:00, 11139.34it/s]
+Writing report to pie-results/eval-dsc-report.jsonl with 752 rows
+---Execution time---
+[Reported in CodeNet] input program (ms): 359.1320 ± 589.3937
+[Reported in CodeNet] reference (output) program (ms): 173.7096 ± 382.3328
+--------------------------------------------------------------------------------
+[Our measurement] input program (ms): 16.6372 ± 18.1592
+[Our measurement] reference (output) program (ms): 3.2368 ± 3.5159
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 35.2677 ± 33.1862
+----Metrics when improved--
+Found 137 problems where the model_generated_potentially_faster_code_col program is faster than the reference program
+[Our measurement] input program (ms): 12.9586 ± 17.6653
+[Our measurement] reference (output) program (ms): 3.1548 ± 2.9349
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 1.1570 ± 1.8431
+Number of cases where reference took longer by our measurement: 34
+----- Additional Metrics -----
+Valid samples (acc=1): 303
+Optimized samples (faster than slow): 209
+%OPT : 0.6897
+Pass@1 : 0.4029
+Speedup@1 : 0.4717x
+No more jobs, exit 12274

@@ -1,0 +1,39 @@
+Reading reference file from py_reference.jsonl
+Reading model generated outputs from to_be_eval/test-qw.jsonl
+Running each program 4 times, skipping the first 1 runs, and getting the input-output pairs from codenet/public_test_cases
+Read 752 rows from to_be_eval/test-qw.jsonl
+Unique inputs in reference: 993
+Number of programs to evaluate: 752
+Number of trials per program: 4
+Number of trials to ignore: 1
+Maximum time per run: 3
+Input column: slow_code_col
+Reference column: reference_code_col
+Model generated column: model_generated_potentially_faster_code_col
+inputs/outputs basepath: codenet/public_test_cases
+
+finished writing programs to /tmp/tmp_osworwe
+
+Ran for 752 problems
+
+  0%|          | 0/752 [00:00<?, ?it/s]
+100%|██████████| 752/752 [00:00<00:00, 10236.98it/s]
+Writing report to pie-results/test-qw-report.jsonl with 752 rows
+---Execution time---
+[Reported in CodeNet] input program (ms): 351.7018 ± 391.3959
+[Reported in CodeNet] reference (output) program (ms): 166.3108 ± 230.8510
+--------------------------------------------------------------------------------
+[Our measurement] input program (ms): 13.8171 ± 14.8955
+[Our measurement] reference (output) program (ms): 2.8506 ± 3.8222
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 13.1302 ± 13.9233
+----Metrics when improved--
+Found 212 problems where the model_generated_potentially_faster_code_col program is faster than the reference program
+[Our measurement] input program (ms): 12.9374 ± 13.5586
+[Our measurement] reference (output) program (ms): 2.5769 ± 3.0332
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 1.3263 ± 1.8954
+Number of cases where reference took longer by our measurement: 69
+----- Additional Metrics -----
+Valid samples (acc=1): 399
+Optimized samples (faster than slow): 298
+%OPT : 0.7468
+No more jobs, exit 4317

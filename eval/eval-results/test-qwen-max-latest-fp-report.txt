@@ -1,0 +1,38 @@
+Reading reference file from py_reference.jsonl
+Reading model generated outputs from to_be_eval/test-qwen-max-latest-sug.jsonl
+Running each program 4 times, skipping the first 1 runs, and getting the input-output pairs from codenet/public_test_cases
+Read 752 rows from to_be_eval/test-qwen-max-latest-sug.jsonl
+Unique inputs in reference: 993
+Number of programs to evaluate: 752
+Number of trials per program: 4
+Number of trials to ignore: 1
+Maximum time per run: 3
+Input column: slow_code_col
+Reference column: reference_code_col
+Model generated column: model_generated_potentially_faster_code_col
+inputs/outputs basepath: codenet/public_test_cases
+finished writing programs to /tmp/tmp5bzympud
+
+Ran for 752 problems
+
+  0%|          | 0/752 [00:00<?, ?it/s]
+100%|██████████| 752/752 [00:00<00:00, 10031.57it/s]
+Writing report to pie-results/test-qwen-max-latest-sug-report.jsonl with 752 rows
+---Execution time---
+[Reported in CodeNet] input program (ms): 469.0689 ± 1398.7974
+[Reported in CodeNet] reference (output) program (ms): 249.8164 ± 1171.0639
+--------------------------------------------------------------------------------
+[Our measurement] input program (ms): 16.5714 ± 15.8618
+[Our measurement] reference (output) program (ms): 3.4703 ± 3.8426
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 6.8099 ± 6.6458
+----Metrics when improved--
+Found 389 problems where the model_generated_potentially_faster_code_col program is faster than the reference program
+[Our measurement] input program (ms): 12.4370 ± 12.6166
+[Our measurement] reference (output) program (ms): 3.7006 ± 3.5463
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 1.5041 ± 2.2039
+Number of cases where reference took longer by our measurement: 101
+----- Additional Metrics -----
+Valid samples (acc=1): 610
+Optimized samples (faster than slow): 523
+%OPT : 0.8574
+No more jobs, exit 18609

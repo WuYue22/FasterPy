@@ -1,0 +1,37 @@
+Reading reference file from py_reference.jsonl
+Reading model generated outputs from to_be_eval/test-CL-7-I.jsonl
+Running each program 4 times, skipping the first 1 runs, and getting the input-output pairs from codenet/public_test_cases
+Read 752 rows from to_be_eval/test-CL-7-I.jsonl
+Unique inputs in reference: 993
+Number of programs to evaluate: 752
+Number of trials per program: 4
+Number of trials to ignore: 1
+Maximum time per run: 3
+Input column: slow_code_col
+Reference column: reference_code_col
+Model generated column: model_generated_potentially_faster_code_col
+inputs/outputs basepath: codenet/public_test_cases
+finished writing programs to /tmp/tmpz5pd6cid
+Ran for 752 problems
+
+  0%|          | 0/752 [00:00<?, ?it/s]
+100%|██████████| 752/752 [00:00<00:00, 10734.09it/s]
+Writing report to pie-results/test-CL-7-I.jsonl-report.jsonl with 752 rows
+---Execution time---
+[Reported in CodeNet] input program (ms): 429.7010 ± 636.3352
+[Reported in CodeNet] reference (output) program (ms): 200.8248 ± 366.9912
+--------------------------------------------------------------------------------
+[Our measurement] input program (ms): 17.0156 ± 16.8803
+[Our measurement] reference (output) program (ms): 3.7245 ± 3.9243
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 19.3085 ± 20.7548
+----Metrics when improved--
+Found 170 problems where the model_generated_potentially_faster_code_col program is faster than the reference program
+[Our measurement] input program (ms): 1.2143 ± 0.8286
+[Our measurement] reference (output) program (ms): 1.2628 ± 0.5300
+[Our measurement] model_generated_potentially_faster_code_col program (ms): 0.7632 ± 0.3154
+Number of cases where reference took longer by our measurement: 96
+----- Additional Metrics -----
+Valid samples (acc=1): 425
+Optimized samples (faster than slow): 306
+%OPT : 0.7200
+No more jobs, exit 15481
