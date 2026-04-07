@@ -7,7 +7,7 @@
     <a href="https://github.com/WuYue22/FasterPy">
         <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=FFE165&style=for-the-badge" alt="">
     </a>
-    <a href="">
+    <a href="https://arxiv.org/abs/2512.22827">
         <img src="https://img.shields.io/badge/Paper-000?logoColor=FFE165&logo=arxiv&style=for-the-badge" alt="">
     </a>
     <hr>
@@ -39,10 +39,7 @@ pip install -r requirements.txt
 ### Data Preparation
 **1. Knowledge Base**
 
-We provide the dataset **OD-base.jsonl**, which serves as the knowledge base used by RAG for code execution efficiency optimization, at
-[this url](https://huggingface.co/datasets/YueWu2/code-opt-knowledge/tree/main).
-
-OD-base.jsonl is derived from two existing public datasets, namely [the Python split of PIE](https://drive.google.com/file/d/1ec8eOWgnBrzy2HlNDlTX6iURwQcIxDXH/view?usp=sharing) and [Mercury](https://huggingface.co/datasets/Elfsong/Mercury).
+We provide the dataset **[OD-base](https://huggingface.co/datasets/YueWu2/code-opt-knowledge/tree/main)**, which serves as the knowledge base used by RAG for code execution efficiency optimization. OD-base is derived from two existing public datasets, namely [the Python split of PIE](https://drive.google.com/file/d/1ec8eOWgnBrzy2HlNDlTX6iURwQcIxDXH/view?usp=sharing) and [Mercury](https://huggingface.co/datasets/Elfsong/Mercury).
 Details of the data processing can be found in Section 5.2 of our paper .
 
 Each line in OD-base.jsonl contains a JSON object with the following fields:
@@ -175,7 +172,7 @@ To evaluate the performance of <span style="font-family: Consolas;">FasterPy</sp
 
 - **CodeLlama-7B-Instruct**: an open-source, instruction-tuned model from Meta designed for multilingual code generation and completion.
 
-- **Qwen-Max-Latest**: a large-scale mixture-of-experts (MoE) model representing high-end commercial performance.
+- **Qwen-Max-0125**: a large-scale mixture-of-experts (MoE) model representing high-end commercial performance.
 
 - **Codex (GPT-5-Codex)**: a large-scale coding-specific LLM, demonstrating strong capabilities in code understanding and generation across multiple programming languages.
 
@@ -209,7 +206,7 @@ Here we explain each part of this repo.
 @article{Wu2025FasterPy,
   author = {Wu, Yue and Han, Minghao and Li, Ruiyin and Liang, Peng and Tahir, Amjed and Li, Zengyang and Feng, Qiong and Shahin, Mojtaba},
   title = {{FasterPy: An LLM-based Code Execution Efficiency Optimization Framework}},
-  journal={arXiv preprint arXiv:xxxx.xxxxx},
+  journal={arXiv preprint arXiv:2512.22827},
   year={2025}
 }
 ```
