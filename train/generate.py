@@ -95,6 +95,8 @@ def infer(row):
         add_generation_prompt=True,
         return_tensors="pt",
     ).to(p_model.device)
+    # for cost
+    input_tokens = model_inputs.shape[1]
     with torch.inference_mode():
         outputs = p_model.generate(
             model_inputs,
@@ -105,15 +107,31 @@ def infer(row):
             top_p=0.95,
             num_return_sequences=1,
         )
+    # 输出 token 数
+    output_tokens = outputs.shape[1] - input_tokens
+
+    # 总 token
+    total_tokens = outputs.shape[1]
     response = tokenizer.decode(outputs[0][len(model_inputs[0]):], skip_special_tokens=True)
     del model_inputs
     del outputs
     torch.cuda.empty_cache()
 
     code = extract_code(response)
-    return code
+    return pd.Series({
+        "code": code,
+        "input_tokens": int(input_tokens),
+        "output_tokens": int(output_tokens),
+        "total_tokens": int(total_tokens)
+    })
+    # return code
+results = df.progress_apply(infer, axis=1)
 
-df['model_generated_potentially_faster_code_col'] = df.progress_apply(infer, axis=1)
+df['model_generated_potentially_faster_code_col'] = results['code']
+df['input_tokens'] = results['input_tokens']
+df['output_tokens'] = results['output_tokens']
+df['total_tokens'] = results['total_tokens']
+# df['model_generated_potentially_faster_code_col'] = df.progress_apply(infer, axis=1)
 torch.cuda.empty_cache()
 df.to_json("test-qw2.5-7b-i-fp.jsonl",lines=True,orient='records')
 empty_rows = df[df['model_generated_potentially_faster_code_col'] == '']
