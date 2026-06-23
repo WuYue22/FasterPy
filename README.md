@@ -5,10 +5,10 @@
 
 <div align="center">
     <a href="https://github.com/WuYue22/FasterPy">
-        <img src="https://img.shields.io/badge/GitHub-000?logo=github&logoColor=FFE165&style=for-the-badge" alt="">
+      <img src="https://img.shields.io/badge/Code-GitHub-2d333b?style=flat-square&logo=github" alt="github">
     </a>
     <a href="https://arxiv.org/abs/2512.22827">
-        <img src="https://img.shields.io/badge/Paper-000?logoColor=FFE165&logo=arxiv&style=for-the-badge" alt="">
+      <img src="https://img.shields.io/badge/Paper-arXiv-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv">
     </a>
     <hr>
 </div>
