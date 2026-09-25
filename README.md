@@ -203,10 +203,10 @@ Here we explain each part of this repo.
 ## 📝 Citation
 
 ```bibtex
-@article{Wu2025FasterPy,
+@article{Wu2026FasterPy,
   author = {Wu, Yue and Han, Minghao and Li, Ruiyin and Liang, Peng and Tahir, Amjed and Li, Zengyang and Feng, Qiong and Shahin, Mojtaba},
   title = {{FasterPy: An LLM-based Code Execution Efficiency Optimization Framework}},
   journal={arXiv preprint arXiv:2512.22827},
-  year={2025}
+  year={2026}
 }
 ```
